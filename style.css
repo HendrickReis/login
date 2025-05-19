@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 255, 255, 0.712);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    background-image: url("assets/images/empresa-3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+     transition: background-image 3s ease-in-out;
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(11px);
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.login__area {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.233);
+    background-color: white;
+}
+
+.login-image__area, .login-text__area {
+    display: flex;
+
+    height: 100%;
+    width: 50%;
+    background-color: brown;
+}
+
+.login-image__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 50%;
+}
+
+.login-image__show {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("./assets/images/test-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.login-text__area {
+    padding: 8px;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(240deg, rgb(124, 124, 241), rgb(104, 190, 211), rgb(110, 208, 211));
+}
+
+.login-input__area {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#email__input, #password__input {
+    border-radius: 4px;
+    border: none;
+    height: 30px;
+    width: 250px;
+    padding: 7px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.login-text__key-area {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    color: white;
+    height: 35px;
+    background-color: rgb(0, 132, 255);
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    margin: 5px;
+    transition-duration: .3s;
+}
+
+button:hover {
+    background-color: rgb(13, 101, 184);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+    .login__area {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 521px) {
+    .login__area {
+        width: 400px;
+        height: 500px;
+    }
+
+    .login-input__area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        padding: 10px;
+    }
+    
+    #email__input, #password__input {
+    height: 30px;
+    width: 150px;
+}
+
+    button {
+   width: 150px;
+    }
+
+    .login-text__key-area {
+        width: 200px;
+        padding: 0 15px;
+    }
+}
